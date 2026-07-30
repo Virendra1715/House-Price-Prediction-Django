@@ -182,37 +182,44 @@ The dataset contains various house features including:
 
 ## Home Page
 
-(Add Screenshot Here)
+<img width="582" height="399" alt="image" src="https://github.com/user-attachments/assets/0580a557-fc96-40d2-bde7-06812d500124" />
+
 
 ---
 
 ## Prediction Page
 
-(Add Screenshot Here)
+<img width="955" height="503" alt="image" src="https://github.com/user-attachments/assets/5d712ad5-4be0-4614-8c52-313163ec6265" />
+
 
 ---
 
 ## Prediction Result
 
-(Add Screenshot Here)
+
+
 
 ---
 
 ## Login Page
 
-(Add Screenshot Here)
+<img width="952" height="514" alt="image" src="https://github.com/user-attachments/assets/5be49829-0252-4ada-85e4-a27881a97943" />
+
 
 ---
 
 ## Register Page
 
-(Add Screenshot Here)
+<img width="224" height="314" alt="image" src="https://github.com/user-attachments/assets/4e5ecfc6-f31e-4d56-aa01-6576352b721a" />
+
 
 ---
 
 ## Prediction History
 
-(Add Screenshot Here)
+<img width="959" height="475" alt="image" src="https://github.com/user-attachments/assets/bcadd5a6-f636-4354-bd70-8dbe11e9b2c3" />
+
+
 
 ---
 
