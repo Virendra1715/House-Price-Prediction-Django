@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+db.sqlite3
+.vscode/
+venv/
+.venv/
+.env
+house_price/ml_model/house_price_model.pkl

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+ 
+    <title>Predict House Price</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+            House Price Prediction
+        </a>
+
+        <div class="ms-auto">
+
+            <a href="{% url 'home' %}"
+               class="btn btn-outline-light me-2">
+                Home
+            </a>
+
+            <a href="{% url 'history' %}"
+               class="btn btn-outline-light me-2">
+                History
+            </a>
+
+            <a href="{% url 'logout' %}"
+               class="btn btn-danger">
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<h2 class="text-center">
+
+House Price Prediction
+
+</h2>
+
+</div>
+
+<div class="card-body">
+
+<form method="POST" action="{% url 'predict' %}">
+    {% csrf_token %}
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Bedrooms
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="bedrooms">
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Bathrooms
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="bathrooms">
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+Built-up Area (sq ft)
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="sqft_living">
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Plot Area (sq ft)
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="sqft_lot">
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Floors
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="floors">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Condition
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="condition">
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Grade
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="grade">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Above Ground Area (sq ft)
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="sqft_above">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Basement  
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="sqft_basement">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Year Built
+
+</label>
+
+<input type="text"
+       class="form-control"
+       name="yr_built">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Year Renovated
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="yr_renovated">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Living Area in 2015 (sq ft)
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="sqft_living15">
+
+</div>
+<div class="mb-3">
+
+<label class="form-label">
+
+Near By Plot (sq ft)
+
+</label>
+
+<input type="number"
+       class="form-control"
+       name="sqft_lot15">
+
+</div>
+
+
+
+
+
+<div class="text-center">
+
+    <button class="btn btn-success btn-lg">
+        Predict Price
+    </button>
+
+</div>
+
+</form>
+
+{% if prediction != None %}
+
+<div class="mt-4">
+
+    <div class="alert alert-success text-center">
+
+        <h4>Predicted House Price</h4>
+
+        <h2>₹ {{ prediction|floatformat:2 }}</h2>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
